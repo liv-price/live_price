@@ -1,0 +1,191 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	{%block title%}
+	<title>Homepage</title>
+	{%endblock title%}
+	<link rel="stylesheet" type="text/css" href="{% static 'main.css' %}">
+	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+	<style>
+
+.searchbox{
+	position: relative;
+	top:50px;
+	min-width: 600px;
+}
+.searchbox h2{
+	color: black;
+	font-size: 30px;
+	font-weight: 500;
+	margin-bottom: 10px;
+
+}
+.searchbox input{
+
+
+	position: relative;
+	width: 100%;
+	display: inline-block;
+	font-size: 20px;
+}
+.searchbox input[type="text"]{
+	margin-left: 250px;
+	color: #000;
+	width: 440px;
+	height: 50px;
+	border-color : black;
+	padding: 0 25px;
+}
+.searchbox input[type="submit"]
+{
+	position: relative;
+	left: -5px;
+	width: 150px;
+	height: 54px;
+	border: 5px solid #ff4282;
+	outline: none;
+	cursor: pointer;
+	background: #ff4282;
+	color: #fff;
+
+}
+
+.searchbox input[type="submit"]:hover{
+	background: #ef296c;
+}
+
+
+		.hire{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+
+    padding:10px;
+    background-color:white;
+
+}
+	.hire-content h2 {
+		color:white;
+
+		text-decoration: none;
+	}
+	.hire-content a{
+		text-decoration: none;
+		color: white;
+	}
+.hire-content{
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-basis: 210px;
+    height: 80px;
+    border-radius: 12px;
+    margin: 8px;
+    justify-content: center;
+    border:2px solid white;
+}
+
+	</style>
+</head>
+<body>
+{%block header%}
+<div class="header">
+
+
+	<lottie-player src="https://assets7.lottiefiles.com/temp/lf20_dQChFA.json"  background="transparent"  speed="1"  style="width: 100px; height: 100px; "   loop  autoplay></lottie-player>
+	
+	<h1 class="logo nk" >
+	<span><b>L</b></span><span>ive</span>
+	<span><b>P</b></span><span>rice</span>
+				</h1>
+				{%block nav%}
+				<ul>
+					<li>
+						<a href="#" class="active"><b>Home</b></a>
+					</li>
+					<li>
+						<div class="wrapper">
+           					<div class="trigger">
+							<a href="#"><b>About Us</b></a>
+							</div>
+							<div class="content">
+							<div class="body">
+<p>This is a platform which will help user to search for a product from different trusted websites from a single search.<br>
+</p>
+
+							</div>
+           					</div>
+        				</div>
+					</li>
+				</ul>
+				{%endblock nav%}
+		<ul class="sci">
+				<li><a href="https://www.facebook.com/neeraj.kumarsingh.754"><i class="fa fa-facebook"></i></a></li>
+				<li><a href="https://twitter.com/NeerajS02579382"><i class="fa fa-twitter"></i></a></li>
+				<li><a href="https://www.linkedin.com/in/neeraj-kumar-891a5717a"><i class="fa fa-linkedin"></i></a></li>
+				<li><a href="https://www.instagram.com/codeman_0001"><i class="fa fa-instagram"></i></a></li>
+			</ul>
+</div>
+{% endblock header %}
+{% block content %}
+
+<div class="searchbox">
+	<br>
+	<br>
+	<br>
+    <br>
+    <h2 ><b><centre>The smartest way to shop online is here, compare price on LIVE-PRICE!</centre></b></h2>
+    <br>
+	<form>
+		<input type="text" placeholder="Search Here..." name="InputItem" >
+
+		<input type="submit" value="Search">
+	</form>
+	<br>
+	<h2><centre>Search by Category</centre></h2>
+	<div class="hire">
+
+		<div class="hire-content fas fa-mobile-alt">
+		  <h2><a href="./base.html">Electronics</a></h2>
+		</div>
+		<div class="hire-content fas fa-tshirt">
+		  <h2><a href="./base.html">Fashion</a></h2>
+		</div>
+		<div class="hire-content fas fa-chair">
+		  <h2><a href="./base.html">Furniture</a></h2>
+		</div>
+		<div class="hire-content fas fa-baby">
+		  <h2><a href="./base.html">Toys & Baby</a></h2>
+		</div>
+		<div class="hire-content fas fa-paint-brush">
+		  <h2><a href="./base.html">Beauty</a></h2>
+		</div>
+		<div class="hire-content fas fa-volleyball-ball">
+			<h2><a href="./base.html"> Sports</a></h2>
+		</div>
+		<div class="hire-content fas fa-carrot">
+			<h2><i class="fas fa-coffee"><a href="./base.html">Grocery</a></i></h2>
+		</div>
+
+	 </div> <!--
+	<div class="Cate">
+	 <h2>Categories</h4>
+		<button class="avibutton"><a href="./base.html">Electronics</a></button>
+		<button class="avibutton"><a href="./base.html">Fashion</a></button>
+		<button class="avibutton"><a href="./base.html">Home & Furniture</a></button>
+		<button class="avibutton"><a href="./base.html">TV & Appliances</a></button><br>
+		<button class="avibutton"><a href="./base.html">Toys & Baby</a></button>
+		<button class="avibutton"><a href="./base.html">Beauty & Personal Care</a></button>
+		<button class="avibutton"><a href="./base.html"> Sports</a></button>
+		<button class="avibutton"><a href="./base.html">Grocery</a></button>
+	</div> -->
+</div>
+{% endblock content %}
+<br>
+
+
+</body>
+</html>
